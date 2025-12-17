@@ -1,0 +1,374 @@
+/* components/Clientes/Clientes.module.css */
+.clientesSection {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.carouselContainer {
+  position: relative;
+  margin: 3rem 0;
+  padding: 0 60px;
+}
+
+.clientsCarousel {
+  margin: 0 -15px;
+}
+
+.clientLogoItem {
+  padding: 15px;
+}
+
+.clientLogo {
+  padding: 2rem;
+  border-radius: 15px !important;
+  text-align: center;
+  transition: all 0.3s ease;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border: 1px solid #e9ecef;
+}
+
+.clientLogo:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+  border-color: #003366;
+}
+
+.logoImageContainer {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.logoImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: grayscale(0%);
+  transition: filter 0.3s ease;
+}
+
+.clientLogo:hover .logoImage {
+  filter: grayscale(0%);
+}
+
+.clientName {
+  color: #003366 !important;
+  margin-bottom: 0.25rem !important;
+  font-size: 0.9rem !important;
+  line-height: 1.2 !important;
+}
+
+.clientDescription {
+  line-height: 1.2 !important;
+  font-size: 0.75rem !important;
+}
+
+.carouselControls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.carouselButton {
+  width: 50px !important;
+  height: 50px !important;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2) !important;
+  pointer-events: all !important;
+  transition: all 0.3s ease !important;
+}
+
+.carouselButton:hover {
+  transform: scale(1.1);
+}
+
+.carouselIndicators {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 2rem 0;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(0, 51, 102, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator:hover {
+  background: rgba(0, 51, 102, 0.4);
+}
+
+.indicator.active {
+  background: #003366;
+  transform: scale(1.2);
+}
+
+.statsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 4rem 0;
+  flex-wrap: wrap;
+}
+
+.statCard {
+  flex: 1;
+  min-width: 200px;
+  max-width: 250px;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 15px !important;
+  background: white;
+  transition: transform 0.3s ease;
+  border: 1px solid #e9ecef;
+}
+
+.statCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.statValue {
+  color: #003366 !important;
+  margin-bottom: 0.5rem !important;
+  font-size: 2.5rem !important;
+}
+
+.statLabel {
+  font-size: 0.9rem !important;
+}
+
+.testimonialsSection {
+  margin-top: 4rem;
+  padding: 2rem 0;
+}
+
+.testimonialsTitle {
+  color: #003366 !important;
+  margin-bottom: 2rem !important;
+  font-weight: 600 !important;
+}
+
+.testimonialsContainer {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.testimonialsCarousel {
+  margin: 0 -15px;
+}
+
+.testimonialItem {
+  padding: 15px;
+}
+
+.testimonialCard {
+  padding: 3rem;
+  border-radius: 15px !important;
+  background: white;
+  position: relative;
+  border: 1px solid #e9ecef;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.quoteIcon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 60px;
+  color: #00A859;
+  opacity: 0.2;
+  font-family: Georgia, serif;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.testimonialText {
+  line-height: 1.8 !important;
+  margin-bottom: 2rem !important;
+  color: #343a40;
+  font-style: italic;
+  font-size: 1.1rem !important;
+  position: relative;
+  z-index: 1;
+}
+
+.testimonialAuthor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid #e9ecef;
+  padding-top: 1.5rem;
+}
+
+.authorInfo {
+  text-align: center;
+}
+
+.authorName {
+  color: #003366 !important;
+  margin-bottom: 0.25rem !important;
+}
+
+.authorRole {
+  font-size: 0.9rem !important;
+}
+
+/* Estilos do Slick Carousel */
+:global(.slick-dots) {
+  bottom: -40px !important;
+}
+
+:global(.slick-dots li button:before) {
+  font-size: 12px !important;
+  color: #003366 !important;
+  opacity: 0.5 !important;
+}
+
+:global(.slick-dots li.slick-active button:before) {
+  color: #00A859 !important;
+  opacity: 1 !important;
+}
+
+:global(.slick-prev),
+:global(.slick-next) {
+  width: 40px !important;
+  height: 40px !important;
+  z-index: 2;
+}
+
+:global(.slick-prev:before),
+:global(.slick-next:before) {
+  color: #003366 !important;
+  font-size: 30px !important;
+  opacity: 1 !important;
+}
+
+:global(.slick-prev) {
+  left: -50px !important;
+}
+
+:global(.slick-next) {
+  right: -50px !important;
+}
+
+:global(.slick-prev:hover:before),
+:global(.slick-next:hover:before) {
+  color: #00A859 !important;
+}
+
+@media (max-width: 1024px) {
+  .carouselContainer {
+    padding: 0 50px;
+  }
+  
+  :global(.slick-prev) {
+    left: -40px !important;
+  }
+  
+  :global(.slick-next) {
+    right: -40px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .carouselContainer {
+    padding: 0 40px;
+  }
+  
+  .carouselControls {
+    display: none;
+  }
+  
+  .clientLogo {
+    height: 200px;
+    padding: 1.5rem;
+  }
+  
+  .logoImageContainer {
+    height: 60px;
+  }
+  
+  .statsContainer {
+    gap: 1rem;
+  }
+  
+  .statCard {
+    min-width: 180px;
+    padding: 1.5rem;
+  }
+  
+  .testimonialCard {
+    padding: 2rem;
+    min-height: 200px;
+  }
+  
+  :global(.slick-prev) {
+    left: -30px !important;
+  }
+  
+  :global(.slick-next) {
+    right: -30px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .carouselContainer {
+    padding: 0 20px;
+  }
+  
+  .clientLogo {
+    height: 180px;
+    padding: 1rem;
+  }
+  
+  .clientName {
+    font-size: 0.8rem !important;
+  }
+  
+  .clientDescription {
+    font-size: 0.7rem !important;
+  }
+  
+  .statCard {
+    min-width: 100%;
+    max-width: 100%;
+  }
+  
+  .testimonialCard {
+    padding: 1.5rem;
+    min-height: 180px;
+  }
+  
+  .testimonialText {
+    font-size: 1rem !important;
+  }
+  
+  :global(.slick-prev) {
+    left: -20px !important;
+  }
+  
+  :global(.slick-next) {
+    right: -20px !important;
+  }
+}

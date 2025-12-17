@@ -1,0 +1,106 @@
+/* components/Hero/Hero.module.css */
+.heroSection {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 64, 128, 0.9)), 
+              url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.heroOverlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.heroTitle {
+  margin-bottom: 1.5rem !important;
+  font-weight: 700 !important;
+}
+
+.heroTitle .highlight {
+  color: #00A859;
+}
+
+.heroSubtitle {
+  margin-bottom: 2rem !important;
+  opacity: 0.9;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.heroStats {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.statItem {
+  text-align: center;
+  flex: 1;
+  min-width: 150px;
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.2rem !important;
+  }
+  
+  .heroButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .heroButtons button {
+    width: 100%;
+    max-width: 300px;
+    margin: 0.5rem 0 !important;
+  }
+  
+  .heroStats {
+    justify-content: center;
+  }
+  
+  .statItem {
+    min-width: 120px;
+  }
+  
+  .statItem h3 {
+    font-size: 2rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 1.8rem !important;
+  }
+  
+  .heroSubtitle {
+    font-size: 1rem !important;
+  }
+  
+  .statItem {
+    min-width: 100px;
+  }
+}

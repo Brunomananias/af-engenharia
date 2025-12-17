@@ -1,0 +1,114 @@
+/* components/Portfolio/Portfolio.module.css */
+.portfolioSection {
+  padding: 80px 0;
+  background: white;
+}
+
+.portfolioFilter {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.projectsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.projectCard {
+  flex: 1 1 calc(33.333% - 1rem);
+  min-width: 280px;
+  border-radius: 10px !important;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projectCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+.projectStatus {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #f8f9fa;
+}
+
+.projectContent {
+  padding: 1.5rem;
+}
+
+.projectTitle {
+  color: #003366;
+  margin-bottom: 0.5rem !important;
+  font-weight: 600 !important;
+}
+
+.projectLocation {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  color: #6c757d;
+}
+
+.projectDescription {
+  margin-bottom: 1rem !important;
+  line-height: 1.5 !important;
+}
+
+.servicesSection {
+  padding: 3rem !important;
+  border-radius: 10px !important;
+}
+
+.servicesGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.serviceCategory {
+  flex: 1 1 calc(33.333% - 1.333rem);
+  min-width: 250px;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.serviceCategory h5 {
+  color: #003366;
+  margin-bottom: 1rem !important;
+  font-weight: 600 !important;
+}
+
+@media (max-width: 768px) {
+  .projectCard {
+    flex: 1 1 100%;
+  }
+  
+  .servicesGrid {
+    flex-direction: column;
+  }
+  
+  .serviceCategory {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolioFilter {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .portfolioFilter button {
+    width: 100%;
+  }
+}

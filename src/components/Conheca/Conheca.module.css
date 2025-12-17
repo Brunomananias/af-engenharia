@@ -1,0 +1,540 @@
+/* components/Conheca/Conheca.module.css */
+.conhecaSection {
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hero Section */
+.heroSection {
+  background: linear-gradient(135deg, 
+    rgba(0, 51, 102, 0.95) 0%,
+    rgba(0, 64, 128, 0.9) 100%),
+    url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  padding: 120px 0 80px;
+  margin-bottom: 80px;
+  position: relative;
+}
+
+.heroSection::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(to bottom, transparent, #ffffff);
+}
+
+.heroContent {
+  text-align: center;
+  color: white;
+}
+
+.heroTitle {
+  font-weight: 800 !important;
+  margin-bottom: 1.5rem !important;
+  letter-spacing: -0.5px;
+}
+
+.gradientText {
+  background: linear-gradient(90deg, #00A859, #00D6A0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.heroSubtitle {
+  opacity: 0.9;
+  line-height: 1.6 !important;
+  margin: 0 auto !important;
+}
+
+/* Seções Gerais */
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.sectionTitle {
+  font-weight: 800 !important;
+  margin-bottom: 1rem !important;
+  letter-spacing: -0.5px;
+  color: #003366;
+}
+
+.highlight {
+  color: #00A859;
+  position: relative;
+}
+
+.highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #00A859;
+  border-radius: 2px;
+  opacity: 0.3;
+}
+
+.titleDivider {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #003366, #00A859) !important;
+  margin: 0 auto !important;
+  border: none;
+  border-radius: 2px;
+}
+
+/* História */
+.historiaSection {
+  margin-bottom: 100px;
+}
+
+.historiaContent {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.fundacaoCard {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  border-radius: 24px;
+  padding: 60px;
+  margin-bottom: 60px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(0, 51, 102, 0.08);
+  box-shadow: 0 10px 40px rgba(0, 51, 102, 0.05);
+}
+
+.fundacaoCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #003366, #00A859);
+  border-radius: 24px 24px 0 0;
+}
+
+.fundacaoIcon {
+  color: #003366;
+  margin-bottom: 30px;
+}
+
+.fundacaoTitle {
+  font-weight: 700 !important;
+  color: #003366;
+  margin-bottom: 20px !important;
+  font-size: 2rem !important;
+}
+
+.fundacaoText {
+  font-size: 1.125rem !important;
+  line-height: 1.8 !important;
+  color: #495057;
+  margin-bottom: 30px !important;
+  max-width: 800px;
+}
+
+.fundacaoText strong {
+  color: #003366;
+  font-weight: 600;
+}
+
+.locationInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0, 51, 102, 0.1);
+}
+
+.locationIcon {
+  color: #00A859;
+}
+
+.locationText {
+  color: #6c757d !important;
+  font-weight: 500 !important;
+}
+
+/* Diferenciais Grid */
+.diferenciaisGrid {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.diferencialCard {
+  flex: 1;
+  min-width: 250px;
+  padding: 40px 30px;
+  background: white;
+  border-radius: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 51, 102, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.diferencialCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 51, 102, 0.1);
+  border-color: #00A859;
+}
+
+.diferencialCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #003366, #00A859);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.diferencialCard:hover::before {
+  opacity: 1;
+}
+
+.diferencialIcon {
+  color: #003366;
+  font-size: 48px !important;
+  margin-bottom: 20px;
+}
+
+.diferencialTitle {
+  font-weight: 700 !important;
+  color: #003366;
+  margin-bottom: 12px !important;
+  font-size: 1.25rem !important;
+}
+
+.diferencialText {
+  color: #6c757d !important;
+  line-height: 1.6 !important;
+  font-size: 0.95rem !important;
+}
+
+/* Pilares */
+.pilaresSection {
+  margin-bottom: 100px;
+}
+
+.pilaresGrid {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.pilarCard {
+  flex: 1;
+  min-width: 300px;
+  padding: 50px 40px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border-radius: 24px;
+  border: 1px solid rgba(0, 51, 102, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.pilarCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #003366, #004080);
+}
+
+.pilarHeader {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.pilarNumber {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #003366;
+  opacity: 0.1;
+  line-height: 1;
+}
+
+.pilarTitle {
+  font-weight: 800 !important;
+  color: #003366;
+  font-size: 1.75rem !important;
+}
+
+.pilarText {
+  font-size: 1.125rem !important;
+  line-height: 1.8 !important;
+  color: #495057;
+}
+
+.valoresCard {
+  flex: 1;
+  min-width: 300px;
+  padding: 50px 40px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border-radius: 24px;
+  border: 1px solid rgba(0, 51, 102, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.valoresCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #00A859, #00D6A0);
+}
+
+.valoresList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.valorItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.valorItem:hover {
+  background: white;
+  transform: translateX(10px);
+}
+
+.valorIcon {
+  color: #00A859;
+  font-size: 24px !important;
+}
+
+.valorText {
+  font-weight: 500 !important;
+  color: #003366;
+  font-size: 1rem !important;
+  margin: 0 !important;
+}
+
+/* ESG Section */
+.esgSection {
+  margin-bottom: 100px;
+}
+
+.esgSubtitle {
+  color: #6c757d !important;
+  font-weight: 400 !important;
+  margin-top: 1rem !important;
+  max-width: 600px;
+  margin: 1rem auto 0 !important;
+}
+
+.esgGrid {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.esgCard {
+  flex: 1;
+  min-width: 300px;
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  background: white;
+  border: 1px solid rgba(0, 51, 102, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 51, 102, 0.05);
+}
+
+.esgCardContent {
+  padding: 50px 40px;
+  position: relative;
+  z-index: 2;
+  background: white;
+}
+
+.esgIcon {
+  margin-bottom: 25px;
+}
+
+.esgTitle {
+  font-weight: 800 !important;
+  color: #003366;
+  margin-bottom: 20px !important;
+  font-size: 1.5rem !important;
+}
+
+.esgText {
+  color: #495057 !important;
+  line-height: 1.7 !important;
+  font-size: 1rem !important;
+}
+
+.esgGradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  z-index: 1;
+}
+
+/* CTA Section */
+.ctaSection {
+  text-align: center;
+  padding: 80px 40px;
+  background: linear-gradient(135deg, 
+    rgba(0, 51, 102, 0.03) 0%,
+    rgba(0, 168, 89, 0.03) 100%);
+  border-radius: 32px;
+  margin: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #003366, #00A859);
+}
+
+.ctaTitle {
+  font-weight: 800 !important;
+  color: #003366;
+  margin-bottom: 20px !important;
+  font-size: 2.5rem !important;
+}
+
+.ctaText {
+  font-size: 1.125rem !important;
+  color: #6c757d !important;
+  line-height: 1.7 !important;
+  max-width: 600px;
+  margin: 0 auto !important;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .heroSection {
+    padding: 100px 0 60px;
+  }
+  
+  .fundacaoCard {
+    padding: 50px 40px;
+  }
+  
+  .pilarCard,
+  .valoresCard,
+  .esgCardContent {
+    padding: 40px 30px;
+  }
+  
+  .ctaSection {
+    padding: 60px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2rem !important;
+  }
+  
+  .sectionTitle {
+    font-size: 2rem !important;
+  }
+  
+  .fundacaoCard {
+    padding: 40px 30px;
+  }
+  
+  .diferenciaisGrid,
+  .pilaresGrid,
+  .esgGrid {
+    flex-direction: column;
+  }
+  
+  .diferencialCard,
+  .pilarCard,
+  .valoresCard,
+  .esgCard {
+    min-width: 100%;
+  }
+  
+  .ctaTitle {
+    font-size: 2rem !important;
+  }
+  
+  .ctaSection {
+    padding: 50px 20px;
+    margin: 60px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroSection {
+    padding: 80px 0 40px;
+  }
+  
+  .heroTitle {
+    font-size: 1.75rem !important;
+  }
+  
+  .sectionTitle {
+    font-size: 1.75rem !important;
+  }
+  
+  .fundacaoCard {
+    padding: 30px 20px;
+  }
+  
+  .fundacaoTitle {
+    font-size: 1.5rem !important;
+  }
+  
+  .pilarCard,
+  .valoresCard,
+  .esgCardContent {
+    padding: 30px 20px;
+  }
+  
+  .pilarNumber {
+    font-size: 2rem;
+  }
+  
+  .pilarTitle {
+    font-size: 1.5rem !important;
+  }
+  
+  .ctaTitle {
+    font-size: 1.75rem !important;
+  }
+}

@@ -1,0 +1,469 @@
+/* components/Privacidade/Privacidade.module.css */
+.privacidadeSection {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 80px 0;
+}
+
+.policyTabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.policyTab {
+  min-width: 200px;
+  text-transform: none !important;
+  font-weight: 600 !important;
+  padding: 1rem 1.5rem !important;
+}
+
+.policyTab.active {
+  box-shadow: 0 5px 15px rgba(0, 51, 102, 0.2) !important;
+}
+
+.policyContent {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.tabPanel {
+  padding: 0;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.policyHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2rem 1rem;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.policyTitle {
+  color: #003366 !important;
+  margin: 0 !important;
+  font-weight: 700 !important;
+}
+
+.certificationBadge {
+  display: inline-flex !important;
+  align-items: center;
+  padding: 0.5rem 1rem !important;
+  background: #003366 !important;
+  color: white !important;
+  border-radius: 20px !important;
+  font-weight: 600 !important;
+}
+
+.certificationBadge.green {
+  background: #00A859 !important;
+}
+
+.certificationBadge.blue {
+  background: #4a6fa5 !important;
+}
+
+.policyCard {
+  padding: 2rem !important;
+}
+
+.policyStatement {
+  background: linear-gradient(135deg, #004080, #003366);
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.statementText {
+  line-height: 1.6 !important;
+  margin: 0 !important;
+}
+
+.statementText strong {
+  color: #00A859;
+}
+
+.qualityPrinciples h4 {
+  color: #003366;
+  text-align: center;
+  margin-bottom: 1.5rem !important;
+}
+
+.principlesGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.principleItem {
+  flex: 1 1 calc(33.333% - 1rem);
+  min-width: 250px;
+  padding: 1.5rem !important;
+  border-left: 4px solid #00A859 !important;
+  transition: transform 0.3s ease;
+}
+
+.principleItem:hover {
+  transform: translateY(-5px);
+}
+
+.principleNumber {
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+  color: #003366;
+  opacity: 0.2;
+  margin-bottom: 0.5rem !important;
+}
+
+.principleItem h5 {
+  color: #003366;
+  margin-bottom: 0.5rem !important;
+  font-weight: 600 !important;
+}
+
+/* Estilos para Segurança & Meio Ambiente */
+.smaStatement {
+  background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+  padding: 1.5rem !important;
+  border-radius: 10px;
+  margin-bottom: 2rem !important;
+  border-left: 4px solid #00A859;
+}
+
+.smaPillars {
+  margin-top: 2rem !important;
+}
+
+.pillarCategory {
+  margin-bottom: 2rem !important;
+  border-radius: 10px !important;
+  overflow: hidden;
+}
+
+.pillarHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.pillarIcon {
+  font-size: 1.5rem !important;
+  color: #003366;
+}
+
+.pillarHeader h5 {
+  color: #003366;
+  margin: 0 !important;
+  font-weight: 600 !important;
+}
+
+.pillarContent {
+  padding: 1.5rem;
+}
+
+.preventionItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.preventionItem:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.preventionBadge {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  color: white;
+}
+
+.preventionBadge.safety {
+  background: #dc3545;
+}
+
+.preventionBadge.health {
+  background: #ffc107;
+  color: #343a40;
+}
+
+.preventionBadge.environment {
+  background: #00A859;
+}
+
+.preventionDetails h6 {
+  color: #003366;
+  margin: 0 0 0.5rem 0 !important;
+  font-weight: 600 !important;
+}
+
+.complianceItem {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.checkIcon {
+  color: #00A859 !important;
+  font-size: 1.2rem !important;
+}
+
+.goalsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.goalItem {
+  flex: 1 1 calc(25% - 1.125rem);
+  min-width: 200px;
+  text-align: center;
+  padding: 1rem !important;
+  background: #f8f9fa;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.goalItem:hover {
+  transform: translateY(-3px);
+}
+
+.goalIcon {
+  font-size: 2rem !important;
+  color: #003366;
+  margin-bottom: 0.5rem;
+}
+
+.goalItem h6 {
+  color: #003366;
+  margin: 0.5rem 0 !important;
+  font-weight: 600 !important;
+}
+
+/* Estilos para Compromisso Social */
+.esgIntro {
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+  padding: 1.5rem !important;
+  border-radius: 10px;
+  margin-bottom: 2rem !important;
+  border-left: 4px solid #4a6fa5;
+}
+
+.esgPillars {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.esgPillar {
+  flex: 1 1 calc(33.333% - 1rem);
+  min-width: 300px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.esgPillar:hover {
+  transform: translateY(-5px);
+}
+
+.esgHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  color: white;
+}
+
+.esgHeader.environmental {
+  background: #00A859;
+}
+
+.esgHeader.social {
+  background: #FF6B00;
+}
+
+.esgHeader.governance {
+  background: #003366;
+}
+
+.esgLetter {
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+
+.esgHeader h4 {
+  margin: 0 !important;
+  font-weight: 600 !important;
+}
+
+.esgContent {
+  padding: 1.5rem;
+}
+
+.esgList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.esgList li {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+  font-weight: 500;
+}
+
+.esgList li:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.sustainabilityMetrics {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+.sustainabilityMetrics h4 {
+  color: #003366;
+  text-align: center;
+  margin-bottom: 2rem !important;
+  font-weight: 600 !important;
+}
+
+.metricsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.metric {
+  flex: 1 1 calc(25% - 1.5rem);
+  min-width: 200px;
+  text-align: center;
+  padding: 1.5rem !important;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.metricValue {
+  font-size: 2.5rem !important;
+  font-weight: 700 !important;
+  color: #003366;
+  margin-bottom: 0.5rem !important;
+}
+
+.metricLabel {
+  color: #6c757d;
+  font-weight: 600 !important;
+  margin-bottom: 1rem !important;
+}
+
+.progressBar {
+  height: 8px;
+  background: #e9ecef;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .policyHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .policyTabs {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .policyTab {
+    width: 100%;
+  }
+  
+  .principlesGrid,
+  .esgPillars,
+  .goalsGrid,
+  .metricsGrid {
+    flex-direction: column;
+  }
+  
+  .principleItem,
+  .esgPillar,
+  .goalItem,
+  .metric {
+    width: 100%;
+    min-width: 100%;
+  }
+  
+  .preventionItem {
+    flex-direction: column;
+  }
+  
+  .preventionBadge {
+    width: 100%;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .policyCard {
+    padding: 1rem !important;
+  }
+  
+  .policyStatement,
+  .smaStatement,
+  .esgIntro {
+    padding: 1rem !important;
+  }
+  
+  .statementText {
+    font-size: 1rem !important;
+  }
+}

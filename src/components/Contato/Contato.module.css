@@ -1,0 +1,417 @@
+/* components/Contato/Contato.module.css */
+.contatoSection {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #ffffff 0%, #fafcff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.contatoSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #003366, #00A859);
+}
+
+.headerContainer {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.mainTitle {
+  font-weight: 800 !important;
+  color: #003366;
+  margin-bottom: 1rem !important;
+  font-size: 3rem !important;
+  letter-spacing: -0.5px;
+}
+
+.highlight {
+  background: linear-gradient(90deg, #00A859, #00D6A0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  color: #6c757d !important;
+  font-weight: 400 !important;
+  font-size: 1.25rem !important;
+  max-width: 600px;
+  margin: 0 auto 2rem !important;
+  line-height: 1.6 !important;
+}
+
+.titleDivider {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #003366, #00A859) !important;
+  margin: 0 auto !important;
+  border: none;
+  border-radius: 2px;
+}
+
+.contatoContent {
+  display: flex;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+/* Informações de Contato */
+.infoContainer {
+  flex: 1;
+  min-width: 300px;
+}
+
+.infoTitle {
+  font-weight: 700 !important;
+  color: #003366;
+  margin-bottom: 40px !important;
+  font-size: 1.75rem !important;
+}
+
+.infoCards {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+.infoCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 30px;
+  background: white;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 51, 102, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.infoCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 51, 102, 0.1);
+  border-color: #00A859;
+}
+
+.infoCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #003366, #00A859);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.infoCard:hover::before {
+  opacity: 1;
+}
+
+.infoIconContainer {
+  flex-shrink: 0;
+}
+
+.infoIcon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(0, 51, 102, 0.1), rgba(0, 168, 89, 0.1));
+  border-radius: 12px;
+  color: #003366;
+  font-size: 24px;
+}
+
+.infoContent {
+  flex: 1;
+}
+
+.infoCardTitle {
+  font-weight: 600 !important;
+  color: #003366;
+  margin-bottom: 8px !important;
+  font-size: 1.25rem !important;
+}
+
+.infoCardText {
+  color: #495057 !important;
+  font-weight: 500 !important;
+  margin-bottom: 6px !important;
+  font-size: 1rem !important;
+  line-height: 1.4 !important;
+}
+
+.infoCardSubtitle {
+  color: #6c757d !important;
+  font-size: 0.875rem !important;
+  line-height: 1.4 !important;
+}
+
+/* Horário de Atendimento */
+.horarioContainer {
+  background: linear-gradient(135deg, #003366, #004080);
+  border-radius: 20px;
+  padding: 40px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.horarioContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #00A859, #00D6A0);
+}
+
+.horarioHeader {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.horarioIcon {
+  font-size: 32px !important;
+  color: #00A859;
+}
+
+.horarioTitle {
+  font-weight: 600 !important;
+  color: white;
+  font-size: 1.25rem !important;
+  margin: 0 !important;
+}
+
+.horarioContent {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.horarioItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.horarioItem:last-child {
+  border-bottom: none;
+}
+
+.horarioLabel {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-weight: 500 !important;
+  font-size: 1rem !important;
+}
+
+.horarioValue {
+  color: white !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+}
+
+/* Formulário de Contato */
+.formContainer {
+  flex: 1;
+  min-width: 300px;
+  background: white;
+  border-radius: 24px;
+  padding: 50px;
+  border: 1px solid rgba(0, 51, 102, 0.08);
+  box-shadow: 0 15px 40px rgba(0, 51, 102, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.formContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #00A859, #00D6A0);
+  border-radius: 24px 24px 0 0;
+}
+
+.formHeader {
+  margin-bottom: 40px;
+}
+
+.formTitle {
+  font-weight: 700 !important;
+  color: #003366;
+  margin-bottom: 12px !important;
+  font-size: 1.75rem !important;
+}
+
+.formSubtitle {
+  color: #6c757d !important;
+  font-size: 1rem !important;
+  line-height: 1.6 !important;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.formRow {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.formField {
+  flex: 1;
+  min-width: 200px;
+}
+
+.fieldLabel {
+  font-weight: 600 !important;
+  color: #003366;
+  margin-bottom: 8px !important;
+  display: block;
+  font-size: 0.95rem !important;
+}
+
+.formActions {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.submitButton {
+  background: linear-gradient(135deg, #00A859, #00D6A0) !important;
+  color: white !important;
+  padding: 16px 48px !important;
+  border-radius: 12px !important;
+  font-weight: 600 !important;
+  font-size: 1.125rem !important;
+  text-transform: none !important;
+  transition: all 0.3s ease !important;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 8px 20px rgba(0, 168, 89, 0.2) !important;
+}
+
+.submitButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0, 168, 89, 0.3) !important;
+}
+
+.formNote {
+  color: #6c757d !important;
+  text-align: center;
+  font-size: 0.875rem !important;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .contatoContent {
+    gap: 40px;
+  }
+  
+  .formContainer {
+    padding: 40px;
+  }
+  
+  .infoCard {
+    padding: 25px;
+  }
+  
+  .horarioContainer {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contatoSection {
+    padding: 80px 0;
+  }
+  
+  .mainTitle {
+    font-size: 2.5rem !important;
+  }
+  
+  .contatoContent {
+    flex-direction: column;
+  }
+  
+  .formRow {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .formField {
+    min-width: 100%;
+  }
+  
+  .formContainer {
+    padding: 30px;
+  }
+  
+  .infoCard {
+    padding: 20px;
+  }
+  
+  .horarioContainer {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainTitle {
+    font-size: 2rem !important;
+  }
+  
+  .headerContainer {
+    margin-bottom: 40px;
+  }
+  
+  .formContainer {
+    padding: 25px 20px;
+  }
+  
+  .infoCard {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .horarioHeader {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  
+  .horarioItem {
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+  }
+  
+  .submitButton {
+    padding: 14px 32px !important;
+  }
+}
