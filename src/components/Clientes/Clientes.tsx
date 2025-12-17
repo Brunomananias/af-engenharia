@@ -124,7 +124,7 @@ const Clientes: React.FC = () => {
     autoplay: true,
     autoplaySpeed: 3000,
     pauseOnHover: true,
-    beforeChange: (current: number, next: number) => setActiveSlide(next),
+    beforeChange: (next: number) => setActiveSlide(next),
     responsive: [
       {
         breakpoint: 1200,
