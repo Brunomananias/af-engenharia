@@ -25,42 +25,7 @@ import {
   ChevronRight
 } from '@mui/icons-material';
 import styles from './Portfolio.module.css';
-import mariana1 from '../../../public/assets/imagens/obras/mariana.jpeg';
-import mariana2 from '../../../public/assets/imagens/obras/mariana-cachoeira-brumado.jpeg';
-import mariana3 from '../../../public/assets/imagens/obras/mariana1.jpeg';
-import salinas1 from '../../../public/assets/imagens/obras/salinas.jpeg';
-import salinas2 from '../../../public/assets/imagens/obras/salinas1.jpeg';
-import salinas3 from '../../../public/assets/imagens/obras/salinas2.jpeg';
-import pecanha1 from '../../../public/assets/imagens/obras/peçanha.jpeg';
-import pecanha2 from '../../../public/assets/imagens/obras/peçanha1.jpeg';
-import pecanha3 from '../../../public/assets/imagens/obras/peçanha2.jpeg';
-import rioparanaiba1 from '../../../public/assets/imagens/obras/rio-paranaiba.jpeg';
-import rioparanaiba2 from '../../../public/assets/imagens/obras/rio-paranaiba1.jpeg';
-import rioparanaiba3 from '../../../public/assets/imagens/obras/rio-paranaiba2.jpeg';
-import catasaltas1 from '../../../public/assets/imagens/obras/catas-altas.jpeg';
-import catasaltas2 from '../../../public/assets/imagens/obras/catas-altas1.jpeg';
-import catasaltas3 from '../../../public/assets/imagens/obras/catas-altas2.jpeg';
-import itabira1 from '../../../public/assets/imagens/obras/itabira.jpeg';
-import itabira2 from '../../../public/assets/imagens/obras/itabira1.jpeg';
-import itabira3 from '../../../public/assets/imagens/obras/itabira2.jpeg';
-import bambui1 from '../../../public/assets/imagens/obras/bambui.jpeg';
-import bambui2 from '../../../public/assets/imagens/obras/bambui1.jpeg';
-import bambui3 from '../../../public/assets/imagens/obras/bambui2.jpeg';
-import formiga1 from '../../../public/assets/imagens/obras/formiga.jpeg';
-import formiga2 from '../../../public/assets/imagens/obras/formiga1.jpeg';
-import formiga3 from '../../../public/assets/imagens/obras/formiga2.jpeg';
-import marianaesgotamento1 from '../../../public/assets/imagens/obras/mariana-esgotamento.jpeg';
-import marianaesgotamento2 from '../../../public/assets/imagens/obras/mariana-esgotamento1.jpeg';
-import marianaesgotamento3 from '../../../public/assets/imagens/obras/mariana-esgotamento2.jpeg';
-import manga1 from '../../../public/assets/imagens/obras/manga.jpeg';
-import manga2 from '../../../public/assets/imagens/obras/manga1.jpeg';
-import manga3 from '../../../public/assets/imagens/obras/manga2.jpeg';
-import sinop1 from '../../../public/assets/imagens/obras/sinop.jpeg';
-import sinop2 from '../../../public/assets/imagens/obras/sinop1.jpeg';
-import sinop3 from '../../../public/assets/imagens/obras/sinop2.jpeg';
-import hemobras1 from '../../../public/assets/imagens/obras/hemobras.jpeg';
-import hemobras2 from '../../../public/assets/imagens/obras/hemobras1.jpeg';
-import hemobras3 from '../../../public/assets/imagens/obras/hemobras2.jpeg';
+import { getCloudinaryUrl } from '../../config/cloudinary';
 interface ProjectImage {
   url: string;
 }
@@ -285,13 +250,13 @@ const Portfolio: React.FC = () => {
       category: "Infraestrutura",
       images: [
         {
-          url: mariana1,
+          url: getCloudinaryUrl('mariana-cachoeira-brumado_awjaks.jpg'),
         },
         {
-          url: mariana2,
+          url: getCloudinaryUrl('mariana1_hflr3z.jpg'),
         },
         {
-          url: mariana3,
+          url: getCloudinaryUrl('mariana_fzkcwd.jpg'),
         }
       ]
     },
@@ -305,13 +270,13 @@ const Portfolio: React.FC = () => {
       category: "Infraestrutura",
       images: [
         {
-          url: salinas1,
+          url: getCloudinaryUrl('salinas_h2m69d.jpg'),
         },
         {
-          url: salinas2,
+          url: getCloudinaryUrl('salinas1_rubldh.jpg'),
         },
         {
-          url: salinas3,
+          url: getCloudinaryUrl('salinas2_k3636s.jpg'),
         }
       ]
     },
@@ -325,13 +290,13 @@ const Portfolio: React.FC = () => {
       category: "Saneamento",
       images: [
         {
-          url: pecanha1,
+          url: getCloudinaryUrl('pe%C3%A7anha_n5x3hi.jpg'),
         },
         {
-          url: pecanha2,
+          url: getCloudinaryUrl('pe%C3%A7anha2_qnqurn.jpg'),
         },
         {
-          url: pecanha3,
+          url: getCloudinaryUrl('pe%C3%A7anha1_brf9p8.jpg'),
         }
       ]
     },
@@ -345,13 +310,13 @@ const Portfolio: React.FC = () => {
       category: "Saneamento",
       images: [
         {
-          url: rioparanaiba1,
+          url: getCloudinaryUrl('rio-paranaiba1_ydo2rz.jpg'),
         },
         {
-          url: rioparanaiba2,
+          url: getCloudinaryUrl('rio-paranaiba2_s2u9sl.jpg'),
         },
         {
-          url: rioparanaiba3,
+          url: getCloudinaryUrl('rio-paranaiba_jypuxx.jpg'),
         }
       ]
     },
@@ -365,13 +330,13 @@ const Portfolio: React.FC = () => {
       category: "Saneamento",
       images: [
         {
-          url: catasaltas1,
+          url: getCloudinaryUrl('catas-altas_psg2im.jpg'),
         },
         {
-          url: catasaltas2,
+          url: getCloudinaryUrl('catas-altas2_pfyhkm.jpg'),
         },
         {
-          url: catasaltas3,
+          url: getCloudinaryUrl('catas-altas1_reeqmh.jpg'),
         }
       ]
     },
@@ -385,13 +350,13 @@ const Portfolio: React.FC = () => {
       category: "Saneamento",
       images: [
         {
-          url: itabira1,
+          url: getCloudinaryUrl('itabira_ahirnk.jpg'),
         },
         {
-          url: itabira2,
+          url: getCloudinaryUrl('itabira2_vlccmn.jpg'),
         },
         {
-          url: itabira3,
+          url: getCloudinaryUrl('itabira1_uqaort.jpg'),
         }
       ]
     },
@@ -405,13 +370,13 @@ const Portfolio: React.FC = () => {
       category: "Saneamento",
       images: [
         {
-          url: marianaesgotamento1,
+          url: getCloudinaryUrl('mariana-esgotamento_l4fqpv.jpg'),
         },
         {
-          url: marianaesgotamento2,
+          url: getCloudinaryUrl('mariana-esgotamento2_ykbst3.jpg'),
         },
         {
-          url: marianaesgotamento3,
+          url: getCloudinaryUrl('mariana-esgotamento1_lf09ul.jpg'),
         }
       ]
     },
@@ -425,13 +390,13 @@ const Portfolio: React.FC = () => {
       category: "Saneamento",
       images: [
         {
-          url: bambui1,
+          url: getCloudinaryUrl('bambui2_hrroua.jpg'),
         },
         {
-          url: bambui2,
+          url: getCloudinaryUrl('bambui1_lobvxq.jpg'),
         },
         {
-          url: bambui3,
+          url: getCloudinaryUrl('bambui_f02dbb.jpg'),
         }
       ]
     },
@@ -445,13 +410,13 @@ const Portfolio: React.FC = () => {
       category: "Saneamento",
       images: [
         {
-          url: formiga1,
+          url: getCloudinaryUrl('formiga1_d9nbfx.jpg'),
         },
         {
-          url: formiga2,
+          url: getCloudinaryUrl('formiga2_tpjmfp.jpg'),
         },
         {
-          url: formiga3,
+          url: getCloudinaryUrl('formiga_wyluyo.jpg'),
         }
       ]
     },
@@ -465,13 +430,13 @@ const Portfolio: React.FC = () => {
       category: "Infraestrutura",
       images: [
         {
-          url: manga1,
+          url: getCloudinaryUrl('manga_qx7lmi.jpg'),
         },
         {
-          url: manga2,
+          url: getCloudinaryUrl('manga1_oldf7g.jpg'),
         },
         {
-          url: manga3,
+          url: getCloudinaryUrl('manga2_bdgv6y.jpg'),
         }
       ]
     },
@@ -485,13 +450,13 @@ const Portfolio: React.FC = () => {
       category: "Saneamento",
       images: [
         {
-          url: sinop1,
+          url: getCloudinaryUrl('sinop_bhwbzn.jpg'),
         },
         {
-          url: sinop2,
+          url: getCloudinaryUrl('sinop1_oc7k8s.jpg'),
         },
         {
-          url: sinop3,
+          url: getCloudinaryUrl('sinop2_yykye0.jpg'),
         }
       ]
     },
@@ -505,13 +470,13 @@ const Portfolio: React.FC = () => {
       category: "Saneamento",
       images: [
         {
-          url: hemobras1,
+          url: getCloudinaryUrl('hemobras_xnf9dg.jpg'),
         },
         {
-          url: hemobras2,
+          url: getCloudinaryUrl('hemobras2_cyvaah.jpg'),
         },
         {
-          url: hemobras3,
+          url: getCloudinaryUrl('hemobras1_qeqxwl.jpg'),
         }
       ]
     }
