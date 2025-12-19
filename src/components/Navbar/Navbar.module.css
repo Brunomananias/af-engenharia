@@ -5,6 +5,8 @@
   box-shadow: 0 2px 20px rgba(0, 51, 102, 0.1) !important;
   transition: all 0.3s ease;
   border-bottom: 3px solid #00A859;
+  min-height: 70px; /* Adicione esta linha */
+  height: auto;
 }
 
 .navbar.scrolled {
@@ -20,9 +22,10 @@
 }
 
 .logoImage {
-  height: 50px;
+  height: 60px; /* Aumente de 50px para 60px */
   width: auto;
   transition: transform 0.3s ease;
+  object-fit: contain; /* Adicione para manter proporção */
 }
 
 .logoImage:hover {
@@ -136,8 +139,8 @@
     padding: 0.5rem 0;
   }
   
-  .logoImage {
-    height: 40px;
+   .logoImage {
+    height: 50px; /* Aumente de 40px para 50px */
   }
   
   .brandText {
@@ -155,7 +158,7 @@
   }
   
   .logoImage {
-    height: 35px;
+    height: 45px;
   }
   
   .brandText {

@@ -8,8 +8,6 @@ import {
   Stack, 
   IconButton,
   Divider,
-  useTheme,
-  useMediaQuery 
 } from '@mui/material';
 import { 
   Facebook as FacebookIcon,
@@ -23,8 +21,6 @@ import {
 import styles from './Footer.module.css';
 
 const Footer: React.FC = () => {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
@@ -181,7 +177,7 @@ const Footer: React.FC = () => {
                     E-mail
                   </Typography>
                   <Typography variant="body2" className={styles.contactText}>
-                    alexandre.figueiredo@af-engenharia.com
+                    rh@af-engenharia.com
                   </Typography>
                 </Box>
               </Box>
@@ -197,25 +193,8 @@ const Footer: React.FC = () => {
             &copy; {currentYear} AF Engenharia & Construtora. Todos os direitos reservados.
           </Typography>
           <Typography variant="caption" className={styles.cnpj}>
-            CNPJ: XX.XXX.XXX/XXXX-XX
+            CNPJ: 36.339.407/0001-95
           </Typography>
-          
-          {/* Links legais */}
-          <Stack 
-            direction={isMobile ? 'column' : 'row'} 
-            spacing={isMobile ? 1 : 3} 
-            className={styles.legalLinks}
-          >
-            <Link href="#" className={styles.legalLink}>
-              Política de Privacidade
-            </Link>
-            <Link href="#" className={styles.legalLink}>
-              Termos de Uso
-            </Link>
-            <Link href="#" className={styles.legalLink}>
-              Política de Qualidade
-            </Link>
-          </Stack>
         </Box>
       </Container>
     </Box>

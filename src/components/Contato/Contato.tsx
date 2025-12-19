@@ -13,7 +13,6 @@ import {
   CircularProgress
 } from '@mui/material';
 import { 
-  Phone as PhoneIcon,
   Email as EmailIcon,
   LocationOn as LocationIcon,
   Person as PersonIcon,
@@ -129,16 +128,9 @@ const Contato: React.FC = () => {
 
   const contactInfo = [
     {
-      icon: <PhoneIcon />,
-      title: 'Telefone',
-      content: '(31) 99331-5730',
-      subtitle: 'Atendimento de segunda a sexta, 8h às 18h'
-    },
-    {
       icon: <EmailIcon />,
       title: 'E-mail',
-      content: 'alexandre.figueiredo@af-engenharia.com',
-      subtitle: 'Respondemos em até 24 horas úteis'
+      content: 'rh@af-engenharia.com',
     },
     {
       icon: <LocationIcon />,

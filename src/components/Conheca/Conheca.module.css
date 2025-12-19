@@ -538,3 +538,29 @@
     font-size: 1.75rem !important;
   }
 }
+
+/* Adicione estas classes */
+
+/* Para cards com hover */
+.pilarCard, .valoresCard, .esgCard, .diferencialCard, .fundacaoCard {
+  transition: all 0.3s ease;
+  will-change: transform;
+}
+
+/* Para evitar layout shift durante animações */
+* {
+  backface-visibility: hidden;
+}
+
+/* Para gradient text animation */
+.gradientText {
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}

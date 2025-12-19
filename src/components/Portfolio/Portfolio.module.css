@@ -1,14 +1,17 @@
-/* components/Portfolio/Portfolio.module.css */
 .portfolioSection {
   padding: 80px 0;
-  background: white;
+  background: linear-gradient(135deg,
+    rgb(181, 182, 182) 0%,        /* #003366 em RGB */
+    rgb(0, 107, 168) 50%,      /* Azul mais claro */
+    rgb(255, 255, 255) 100%    /* Branco */
+  );
 }
 
 .portfolioFilter {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   flex-wrap: wrap;
 }
 
@@ -22,14 +25,16 @@
 .projectCard {
   flex: 1 1 calc(33.333% - 1rem);
   min-width: 280px;
-  border-radius: 10px !important;
+  border-radius: 12px !important;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid #e9ecef;
 }
 
 .projectCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 51, 102, 0.15) !important;
+  border-color: #003366;
 }
 
 .projectStatus {
@@ -37,7 +42,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background: #f8f9fa;
+  background: linear-gradient(90deg, #f8f9fa 0%, #ffffff 100%);
+  border-bottom: 1px solid #e9ecef;
 }
 
 .projectContent {
@@ -47,7 +53,8 @@
 .projectTitle {
   color: #003366;
   margin-bottom: 0.5rem !important;
-  font-weight: 600 !important;
+  font-weight: 700 !important;
+  font-size: 1.1rem !important;
 }
 
 .projectLocation {
@@ -59,12 +66,62 @@
 
 .projectDescription {
   margin-bottom: 1rem !important;
-  line-height: 1.5 !important;
+  line-height: 1.6 !important;
+  color: #495057;
+  font-size: 0.9rem !important;
 }
 
+/* Estilos para o carrossel de fotos */
+.imageThumbnails {
+  display: flex;
+  gap: 6px;
+  margin: 12px 0;
+  height: 70px;
+}
+
+.thumbnail {
+  flex: 1;
+  min-width: 0;
+  border-radius: 6px;
+  border: 2px solid white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.thumbnail:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.moreImages {
+  flex: 0 0 auto;
+  width: 70px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #003366 0%, #00509e 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.moreImages:hover {
+  background: linear-gradient(135deg, #002244 0%, #003366 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Estilos para os serviços */
 .servicesSection {
   padding: 3rem !important;
-  border-radius: 10px !important;
+  border-radius: 12px !important;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border: 1px solid #e9ecef;
 }
 
 .servicesGrid {
@@ -78,14 +135,33 @@
   flex: 1 1 calc(33.333% - 1.333rem);
   min-width: 250px;
   padding: 1.5rem;
-  background: #f8f9fa;
+  background: white;
   border-radius: 10px;
+  border: 1px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.serviceCategory:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 51, 102, 0.1);
+  border-color: #003366;
 }
 
 .serviceCategory h5 {
   color: #003366;
   margin-bottom: 1rem !important;
-  font-weight: 600 !important;
+  font-weight: 700 !important;
+  font-size: 1.2rem !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .projectCard {
+    flex: 1 1 calc(50% - 1rem);
+  }
 }
 
 @media (max-width: 768px) {
@@ -100,9 +176,22 @@
   .serviceCategory {
     width: 100%;
   }
+  
+  .portfolioFilter {
+    gap: 0.5rem;
+  }
+  
+  .portfolioFilter button {
+    flex: 1;
+    min-width: 120px;
+  }
 }
 
 @media (max-width: 480px) {
+  .portfolioSection {
+    padding: 40px 0;
+  }
+  
   .portfolioFilter {
     flex-direction: column;
     align-items: stretch;
@@ -110,5 +199,63 @@
   
   .portfolioFilter button {
     width: 100%;
+    margin-bottom: 0.5rem;
   }
+  
+  .imageThumbnails {
+    height: 60px;
+  }
+  
+  .moreImages {
+    width: 60px;
+  }
+  
+  .servicesSection {
+    padding: 1.5rem !important;
+  }
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.projectCard {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Status badges */
+.projectCard.completed {
+  border-left: 4px solid #28a745;
+}
+
+.projectCard.ongoing {
+  border-left: 4px solid #ffc107;
+}
+
+/* Scroll suave para imagens */
+.imageModal ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.imageModal ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.imageModal ::-webkit-scrollbar-thumb {
+  background: #003366;
+  border-radius: 4px;
+}
+
+.imageModal ::-webkit-scrollbar-thumb:hover {
+  background: #002244;
 }

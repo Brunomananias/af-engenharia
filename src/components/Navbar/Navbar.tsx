@@ -4,7 +4,6 @@ import {
   AppBar, 
   Toolbar, 
   Box, 
-  Button, 
   Container, 
   IconButton,
   Drawer,
@@ -21,7 +20,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import styles from './Navbar.module.css';
 
 // Importe sua logo
-import logo from '../../assets/imagens/logos/logoempresa.png';
+import logo from '/assets/imagens/logos/logoempresa.png';
 
 interface NavbarProps {
   activeSection: string;
@@ -63,7 +62,13 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
               src={logo} 
               alt="AF Engenharia" 
               className={styles.logoImage}
-              style={{ height: '40px', width: 'auto' }}
+              onClick={() => handleNavClick('inicio')}
+              style={{ 
+                cursor: 'pointer', 
+                height: '70px', // ← Aumente aqui
+                width: 'auto', // Mantém proporção
+                maxHeight: '100%' // Não ultrapassa o container
+              }}
             />
           ) : (
             <>
@@ -112,22 +117,6 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
         ))}
       </List>
       <Box sx={{ p: 3, mt: 2, borderTop: '1px solid rgba(255,255,255,0.1)' }}>
-        <Button
-          variant="contained"
-          fullWidth
-          sx={{
-            bgcolor: '#00A859',
-            color: 'white',
-            '&:hover': { bgcolor: '#008A4F' },
-            borderRadius: '8px',
-            py: 1.2,
-            fontWeight: 600,
-            textTransform: 'none'
-          }}
-          onClick={() => handleNavClick('contato')}
-        >
-          Solicitar Orçamento
-        </Button>
       </Box>
     </Box>
   );
@@ -173,17 +162,6 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
                     {item.label}
                   </Link>
                 ))}
-                <Button
-                  variant="contained"
-                  className={styles.contactButton}
-                  onClick={() => handleNavClick('contato')}
-                  sx={{
-                    textTransform: 'none',
-                    fontWeight: 600
-                  }}
-                >
-                  Contato
-                </Button>
               </Box>
             ) : (
               // Menu Mobile (Hamburger)
