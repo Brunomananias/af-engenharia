@@ -1,10 +1,13 @@
 /* components/Hero/Hero.module.css */
 .heroSection {
   height: 100vh;
-  background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 64, 128, 0.9)), 
-              url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+  /* SUBSTITUA pelo caminho da sua imagem */
+  background: linear-gradient(rgba(42, 103, 163, 0.7), rgba(99, 121, 143, 0.8)), 
+              url('/public/assets/imagens/principal.jpeg');
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Efeito parallax opcional */
   color: white;
   display: flex;
   flex-direction: column;
@@ -13,19 +16,27 @@
   position: relative;
 }
 
+/* OU se preferir sem gradiente inicialmente */
+.heroSection.no-gradient {
+  background: url('/assets/principal.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+
 .heroOverlay {
   display: flex;
   flex-direction: column;
   justify-content: center;
   flex: 1;
+  /* Adicione um overlay escuro para melhor legibilidade */
 }
 
 .heroContent {
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Melhora legibilidade */
 }
-
 .heroTitle {
   margin-bottom: 1.5rem !important;
   font-weight: 700 !important;

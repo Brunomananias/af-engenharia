@@ -64,8 +64,7 @@ const Footer: React.FC = () => {
               </Typography>
             </Box>
             <Typography variant="body2" className={styles.footerDescription} paragraph>
-              Excelência em engenharia civil, obras prediais e infraestrutura 
-              com compromisso com a sustentabilidade e responsabilidade social.
+              Excelência em engenharia civil, com foco em obras de saneamento e de infraestrutura essenciais
             </Typography>
             
             {/* Redes sociais */}
@@ -153,9 +152,9 @@ const Footer: React.FC = () => {
                     Endereço
                   </Typography>
                   <Typography variant="body2" className={styles.contactText}>
-                    Rua Ministro Orozimbo Nonato, sala 813, nº442<br />
-                    Vila da Serra, Nova Lima/MG<br />
-                    CEP: 34006-053
+                    Rua José Feliciano Vilela, 102, 
+                    Centro, Coqueiral/MG<br />
+                    CEP: 37235-000
                   </Typography>
                 </Box>
               </Box>

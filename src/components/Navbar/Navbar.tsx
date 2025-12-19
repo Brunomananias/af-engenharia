@@ -1,4 +1,4 @@
-// components/Navbar/Navbar.tsx - CORRIGIDO
+// components/Navbar/Navbar.tsx
 import React, { useState } from 'react';
 import { 
   AppBar, 
@@ -9,10 +9,11 @@ import {
   Drawer,
   List,
   ListItem,
-  ListItemButton, // ✅ Importe ListItemButton
+  ListItemButton,
   ListItemText,
   useTheme,
   useMediaQuery,
+  Typography, // ← Adicione Typography
 } from '@mui/material';
 import { Link } from 'react-scroll';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -32,9 +33,9 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const navItems = [
-    { id: 'inicio', label: 'Início' },
-    { id: 'conheca', label: 'Conheça' },
-    { id: 'portfolio', label: 'Portfólio' },
+    { id: 'inicio', label: 'In\u00EDcio' },
+    { id: 'conheca', label: 'Conhe\u00E7a' },
+    { id: 'portfolio', label: 'Portf\u00F3lio' },
     { id: 'clientes', label: 'Clientes' },
     { id: 'privacidade', label: 'Privacidade' },
     { id: 'contato', label: 'Contato' },
@@ -52,30 +53,66 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
     setMobileOpen(false);
   };
 
-  // Drawer para mobile - CORRIGIDO
+  // Drawer para mobile
   const drawer = (
     <Box sx={{ width: 250, bgcolor: '#003366', height: '100%', color: 'white' }}>
       <Box sx={{ p: 2, display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
-        <Box className={styles.navbarBrand}>
-          {logo ? (
-            <><img
-              src={logo}
-              alt="AF Engenharia"
-              className={styles.logoImage}
-              onClick={() => handleNavClick('inicio')}
-              style={{
-                cursor: 'pointer',
-                height: '70px', // ← Aumente aqui
-                width: 'auto', // Mantém proporção
-                maxHeight: '100%' // Não ultrapassa o container
-              }} /><p>AF Engenharia</p></>
-          ) : (
-            <>
-              <Box component="span" className={styles.brandText}>AF Engenharia</Box>
-              <Box component="span" className={styles.brandSubtitle}>& Construtora</Box>
-            </>
-          )}
-        </Box>
+<Box 
+  className={styles.navbarBrand} 
+  sx={{ 
+    display: 'flex', 
+    alignItems: 'center',
+    cursor: 'pointer'
+  }}
+  onClick={() => handleNavClick('inicio')}
+>
+  {logo ? (
+    <Box sx={{ 
+      display: 'flex', // ← Container principal FLEX
+      alignItems: 'center', // ← Alinha logo e texto no centro vertical
+      gap: 1.5, // ← Espaço entre logo e texto
+    }}>
+      <img 
+        src={logo} 
+        alt="AF Engenharia" 
+        className={styles.logoImage}
+      />
+      <Box sx={{ 
+        display: 'flex',
+        flexDirection: 'column',
+        lineHeight: 1.1
+      }}>
+        <Typography 
+          variant="h6" 
+          sx={{ 
+            color: '#ffffffff',
+            fontWeight: 800,
+            fontSize: { xs: '0.9rem', sm: '1rem', md: '1.1rem' },
+            whiteSpace: 'nowrap'
+          }}
+        >
+          AF Engenharia
+        </Typography>
+        <Typography 
+          variant="subtitle2" 
+          sx={{ 
+            color: '#00A859',
+            fontWeight: 600,
+            fontSize: { xs: '0.7rem', sm: '0.8rem', md: '0.9rem' },
+            whiteSpace: 'nowrap'
+          }}
+        >
+          & Construtora
+        </Typography>
+      </Box>
+    </Box>
+  ) : (
+    <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+      <Box component="span" className={styles.brandText}>AF Engenharia</Box>
+      <Box component="span" className={styles.brandSubtitle}>& Construtora</Box>
+    </Box>
+  )}
+</Box>
         <IconButton onClick={handleDrawerToggle} sx={{ color: 'white' }}>
           <CloseIcon />
         </IconButton>
@@ -84,12 +121,11 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
         {navItems.map((item) => (
           <ListItem 
             key={item.id} 
-            disablePadding // ✅ Adicione disablePadding
+            disablePadding
             sx={{
               borderBottom: '1px solid rgba(255,255,255,0.05)',
             }}
           >
-            {/* ✅ Use ListItemButton em vez de button prop */}
             <ListItemButton 
               onClick={() => handleNavClick(item.id)}
               sx={{
@@ -125,21 +161,62 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
       <AppBar position="fixed" className={styles.navbar}>
         <Container maxWidth="xl">
           <Toolbar sx={{ justifyContent: 'space-between', py: 1 }}>
-            {/* Logo/Brand */}
-            <Box className={styles.navbarBrand} sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+            {/* Logo/Brand com texto */}
+            <Box 
+              className={styles.navbarBrand} 
+              sx={{ 
+                display: 'flex', 
+                alignItems: 'center', 
+                gap: 2,
+                cursor: 'pointer'
+              }}
+              onClick={() => handleNavClick('inicio')}
+            >
               {logo ? (
-                <img 
-                  src={logo} 
-                  alt="AF Engenharia" 
-                  className={styles.logoImage}
-                  onClick={() => handleNavClick('inicio')}
-                  style={{ cursor: 'pointer', height: '50px', width: 'auto' }}
-                />
+                <>
+                  <img 
+                    src={logo} 
+                    alt="AF Engenharia" 
+                    className={styles.logoImage}
+                    style={{ 
+                      cursor: 'pointer', 
+                      height: '50px', 
+                      width: 'auto',
+                      flexShrink: 0 // Evita que a logo encolha
+                    }}
+                  />
+                  {/* TEXTO AO LADO DA LOGO - DESKTOP */}
+                  <Box sx={{ 
+                    display: { xs: 'none', sm: 'flex' }, // Esconde no mobile muito pequeno
+                    flexDirection: 'column',
+                    lineHeight: 1.1
+                  }}>
+                    <Typography 
+                      variant="h6" 
+                      sx={{ 
+                        color: '#003366',
+                        fontWeight: 800,
+                        fontSize: { xs: '0.9rem', sm: '1rem', md: '1.1rem' },
+                        whiteSpace: 'nowrap'
+                      }}
+                    >
+                      AF Engenharia
+                    </Typography>
+                    <Typography 
+                      variant="subtitle2" 
+                      sx={{ 
+                        color: '#00A859',
+                        fontWeight: 600,
+                        fontSize: { xs: '0.7rem', sm: '0.8rem', md: '0.9rem' },
+                        whiteSpace: 'nowrap'
+                      }}
+                    >
+                      & Construtora
+                    </Typography>
+                  </Box>
+                </>
               ) : (
-                <Box 
-                  sx={{ display: 'flex', flexDirection: 'column', cursor: 'pointer' }}
-                  onClick={() => handleNavClick('inicio')}
-                >
+                <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                   <Box component="span" className={styles.brandText}>AF Engenharia</Box>
                   <Box component="span" className={styles.brandSubtitle}>& Construtora</Box>
                 </Box>

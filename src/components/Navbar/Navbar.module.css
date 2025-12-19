@@ -5,7 +5,7 @@
   box-shadow: 0 2px 20px rgba(0, 51, 102, 0.1) !important;
   transition: all 0.3s ease;
   border-bottom: 3px solid #00A859;
-  min-height: 70px; /* Adicione esta linha */
+  min-height: 70px;
   height: auto;
 }
 
@@ -14,36 +14,49 @@
   box-shadow: 0 5px 20px rgba(0, 51, 102, 0.15) !important;
 }
 
+/* CORREÇÃO: Mude navbarBrand para linha */
 .navbarBrand {
-  display: flex;
-  flex-direction: column;
+  display: flex !important;
+  flex-direction: row !important; /* ← Mude de column para row */
+  align-items: center !important; /* ← Centraliza verticalmente */
   line-height: 1.2;
   text-decoration: none;
+  gap: 12px; /* ← Espaço entre logo e texto */
 }
 
 .logoImage {
-  height: 60px; /* Aumente de 50px para 60px */
-  width: auto;
+  height: 60px !important; /* ← MUDEI: estava 0px! */
+  width: auto !important;
   transition: transform 0.3s ease;
-  object-fit: contain; /* Adicione para manter proporção */
+  object-fit: contain;
+  display: block !important; /* ← Garante que aparece */
 }
 
 .logoImage:hover {
   transform: scale(1.05);
 }
 
-.brandText {
-  font-size: 1.5rem;
-  font-weight: 800;
+/* Estilos para o texto ao lado da logo */
+.brandTextContainer {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brandTitle {
   color: #003366;
-  letter-spacing: -0.5px;
+  font-weight: 800;
+  font-size: 1.1rem;
+  white-space: nowrap;
+  margin: 0 !important;
 }
 
 .brandSubtitle {
-  font-size: 0.9rem;
   color: #00A859;
-  font-weight: 500;
-  margin-top: -2px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  margin: 0 !important;
 }
 
 /* Menu Desktop */
@@ -129,8 +142,12 @@
     font-size: 0.9rem;
   }
   
-  .brandText {
-    font-size: 1.3rem;
+  .brandTitle {
+    font-size: 1rem;
+  }
+  
+  .brandSubtitle {
+    font-size: 0.8rem;
   }
 }
 
@@ -139,38 +156,39 @@
     padding: 0.5rem 0;
   }
   
-   .logoImage {
-    height: 50px; /* Aumente de 40px para 50px */
+  .logoImage {
+    height: 50px !important;
   }
   
-  .brandText {
-    font-size: 1.2rem;
+  .brandTitle {
+    font-size: 0.9rem;
   }
   
   .brandSubtitle {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
   }
 }
 
-@media (max-width: 480px) {
-  .navbarBrand {
-    max-width: 150px;
-  }
-  
-  .logoImage {
-    height: 45px;
-  }
-  
-  .brandText {
-    font-size: 1rem;
+@media (max-width: 600px) {
+  .brandTitle {
+    font-size: 0.85rem;
   }
   
   .brandSubtitle {
     font-size: 0.7rem;
   }
   
-  .contactButtonMobile {
-    padding: 0.4rem 1rem !important;
-    font-size: 0.85rem !important;
+  .navbarBrand {
+    gap: 8px !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .brandTextContainer {
+    display: none; /* Esconde texto em telas muito pequenas */
+  }
+  
+  .logoImage {
+    height: 45px !important;
   }
 }

@@ -4,7 +4,6 @@ import { Box, Container, Typography, Divider } from "@mui/material";
 import {
   Engineering,
   AutoAwesome,
-  TrendingUp,
   Groups,
   EmojiEvents,
   LocationOn,
@@ -149,9 +148,10 @@ const Conheca: React.FC = () => {
                     <Typography variant="body1" className={styles.fundacaoText}>
                       Em 2020, o Engenheiro Civil{" "}
                       <strong>Alexandre Figueiredo Melquiades </strong>
-                      fundou a AF Engenharia & Construtora em Nova Lima, Minas
+                      fundou a AF Engenharia & Construtora em Coqueiral, Minas
                       Gerais. Desde então nos dedicamos a obras que realmente
-                      transformam e levam inovação e dignidade a comunidades.
+                      transformam e levam inovação e dignidade a comunidades. Destacamos no setor de
+                      engenharia civil, com foco em obras de saneamento e de infraestrutura essenciais.
                     </Typography>
                   </motion.div>
 
@@ -167,7 +167,7 @@ const Conheca: React.FC = () => {
                         variant="body2"
                         className={styles.locationText}
                       >
-                        Sede em Nova Lima, MG • Atuação em múltiplos estados
+                        Sede em Rua José Feliciano Vilela, 102, 37235-000, Centro, Coqueiral - MG • Atuação em múltiplos estados
                       </Typography>
                     </Box>
                   </motion.div>
@@ -181,11 +181,6 @@ const Conheca: React.FC = () => {
                     icon: <AutoAwesome />,
                     title: "Inovação",
                     description: "Tecnologia de ponta em todos os projetos",
-                  },
-                  {
-                    icon: <TrendingUp />,
-                    title: "Crescimento",
-                    description: "+50 projetos executados com excelência",
                   },
                   {
                     icon: <Groups />,

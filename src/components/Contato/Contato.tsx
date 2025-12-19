@@ -135,8 +135,8 @@ const Contato: React.FC = () => {
     {
       icon: <LocationIcon />,
       title: 'Endereço',
-      content: 'Rua Ministro Orozimbo Nonato, sala 813, nº442',
-      subtitle: 'Vila da Serra, Nova Lima/MG - CEP: 34006-053'
+      content: 'Rua José Feliciano Vilela, 102, nº442',
+      subtitle: 'Centro, Coqueiral/MG - CEP: 37235-000'
     },
     {
       icon: <PersonIcon />,
