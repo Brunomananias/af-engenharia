@@ -20,7 +20,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import styles from './Navbar.module.css';
 
 // Importe sua logo
-import logo from '/assets/imagens/logos/logoempresa.png';
+import logo from '/assets/imagens/logos/logopequena.png';
 
 interface NavbarProps {
   activeSection: string;
@@ -58,18 +58,17 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
       <Box sx={{ p: 2, display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
         <Box className={styles.navbarBrand}>
           {logo ? (
-            <img 
-              src={logo} 
-              alt="AF Engenharia" 
+            <><img
+              src={logo}
+              alt="AF Engenharia"
               className={styles.logoImage}
               onClick={() => handleNavClick('inicio')}
-              style={{ 
-                cursor: 'pointer', 
+              style={{
+                cursor: 'pointer',
                 height: '70px', // ← Aumente aqui
                 width: 'auto', // Mantém proporção
                 maxHeight: '100%' // Não ultrapassa o container
-              }}
-            />
+              }} /><p>AF Engenharia</p></>
           ) : (
             <>
               <Box component="span" className={styles.brandText}>AF Engenharia</Box>
