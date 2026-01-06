@@ -108,7 +108,7 @@ const Clientes: React.FC = () => {
       role: "Parceira"
     },
     {
-      text: "Excelente qualidade na execução das obras de tratamento de esgoto. Comprometimento total com prazos e especificações técnicas.",
+      text: "Excelente qualidade na execução das obras, comprometimento total com prazos e especificaçoes técnicas.",
       author: "Prefeitura Municipal de Salinas",
       role: "Cliente"
     }
