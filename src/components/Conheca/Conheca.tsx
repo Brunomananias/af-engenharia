@@ -149,9 +149,7 @@ const Conheca: React.FC = () => {
                       Em 2020, o Engenheiro Civil{" "}
                       <strong>Alexandre Figueiredo Melquiades </strong>
                       fundou a AF Engenharia & Construtora em Coqueiral, Minas
-                      Gerais. Desde então nos dedicamos a obras que realmente
-                      transformam e levam inovação e dignidade a comunidades. Destacamos no setor de
-                      engenharia civil, com foco em obras de saneamento e de infraestrutura essenciais.
+                      Gerais. Desde então nos dedicamos a executa obras que levam a inovação e dignidade a comunidades. Nos destacamos no setor de engenharia civil,com foco em obras de saneamento e de infraestruturas essenciais.
                     </Typography>
                   </motion.div>
 

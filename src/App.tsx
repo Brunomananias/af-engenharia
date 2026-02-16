@@ -2,6 +2,7 @@
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Box } from '@mui/material'; // ← Importe Box
 import LandingPage from './components/LandingPage';
+// import SiteForaDoAr from './components/SiteForaDoAr';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         className="App"
       >
         <LandingPage />
+        {/* <SiteForaDoAr /> */}
       </Box>
     </Router>
   );
